@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Very-dark-blue : hsl(233, 47%, 7%);
+    --Dark-desaturated-blue : hsl(244, 38%, 16%);
+    --Soft-violet : hsl(277, 64%, 61%);
+    --White : hsl(0, 0%, 100%);
+    --Slightly-transparent-white-1 : hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-2 : hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    background-color: var(--Very-dark-blue);
+}
+
+.container{
+    width: 80%;
+    margin: 10rem auto;
+    color: var(--White);
+    background-color: var(--Dark-desaturated-blue);
+    display: flex;
+    flex-direction: row;
+    height: 65vh;
+    border-radius: 0.5rem;
+}
+
+.container p{
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    color: var(--Slightly-transparent-white-1);
+}
+.container h1{
+    font-size: 2.15rem;
+    font-family: "Inter";
+}
+
+#insights{
+    width: 50%;
+    padding: 3em 6em 3em 4em;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+span{
+    color: var(--Soft-violet);
+}
+
+.numbers p{
+ margin-top: 0;
+ color: var(--Slightly-transparent-white-2);
+}
+
+#image-container{
+    width: 50%;
+    filter: grayscale(100%) brightness(50%) sepia(50%) hue-rotate(-100deg) saturate(500%) contrast(1);
+    padding: 0;
+    background-image: url(images/image-header-desktop.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+/* #image-container img{
+    width: 100%;
+    margin: 0;
+    height: 100%;
+} */
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width:375px){
+    .container{
+        width: 90%;
+        height: 1000px;
+        flex-direction: column-reverse;
+    }
+
+    .container h1{
+        font-size: 1.8rem;
+        font-family: "Inter";
+    }
+    
+
+    #insights{
+        width: 100%;
+        height: 75%;
+        padding: 2em;
+        text-align: center;
+        padding: 1em 2em;
+    }
+
+    #image-container{
+        width: 100%;
+        height: 25%;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-right-radius: 0;
+    }
+
+    .stats{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.25rem;
+    }
+
+    .stats h3{
+        font-size: 1.5rem;
+    }
+}
